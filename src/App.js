@@ -10,7 +10,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/signup" element={<Register />} />
-          <Route path="/home" element={<Hero />} />
+          <Route path="/" element={<Hero />} />
         </Routes>
       </Router>
     </>

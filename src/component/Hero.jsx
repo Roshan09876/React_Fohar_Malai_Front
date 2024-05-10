@@ -1,9 +1,10 @@
 import React from 'react'
+import Register from '../auth/Register'
 
 const Hero = () => {
   return (
     <div>
-      <h1>This is Homepage</h1>
+      <Register/>
     </div>
   )
 }
