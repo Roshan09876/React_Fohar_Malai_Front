@@ -4,7 +4,7 @@ import Register from '../auth/Register'
 const Hero = () => {
   return (
     <div>
-      <Register/>
+      
     </div>
   )
 }

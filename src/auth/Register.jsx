@@ -7,15 +7,13 @@ import logo from '../../src/assets/logo.png'
 
 const Register = () => {
   return (
-    <div className='px-10 py-5 '>
-      <form className='bg-white shadow-xl rounded px-10 py-10'>
+    <div className='px-10 py-5 flex justify-center h-1/2'>
+      <form className='bg-white shadow-xl rounded px-10 py-10 w-3/4'>
         <div className='text-center text-4xl text-green-600 mb-5 '>Please fill up this form for Register</div>
 
         <div className='py-5 flex items-center justify-center'>
           <img class="w-20 h-20 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={logo} alt="" />
         </div>
-        {/* <img class="w-10 h-10 rounded" src="/docs/images/people/profile-picture-5.jpg" alt="Default avatar"> */}
-
         <div className='flex flex-col sm:flex-row gap-5 md:justify-between'>
           <Input className=''
             type='text'
@@ -28,7 +26,7 @@ const Register = () => {
             icon={FaUserCircle}
           />
         </div>
-        <Input className='mt-5 w-2/3'
+        <Input className='mt-5'
           type='email'
           placeholder='Enter your email'
           icon={FaUserCircle}
@@ -60,7 +58,10 @@ const Register = () => {
         <div className='flex justify-center items-center'>
           <Button className='mt-10 text-2xl mb-5' style={{ width: '350px', height: '60px' }} variant='green'>Register</Button>
         </div>
-
+        <div className=' flex justify-center gap-2'>
+          <span>Already have an account?</span>
+          <a className='cursor-pointer' href='/login'>Login</a>
+        </div>
       </form>
     </div>
   )
