@@ -9,6 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/button';
+import { LuContact } from "react-icons/lu";
 
 const Navbar = () => {
     const [isClick, setIsclick] = useState(false);
@@ -39,6 +40,10 @@ const Navbar = () => {
                     <div className='flex flex-row items-center gap-1 hover:underline'>
                         <HiOutlineLightBulb size={20} />
                         <Link>About Us</Link>
+                    </div>
+                    <div className='flex flex-row items-center gap-1 hover:underline'>
+                        <LuContact size={20} />
+                        <Link>Contact Us</Link>
                     </div>
                 </div>
                 <div className='flex text-white gap-2'>
