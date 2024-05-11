@@ -24,24 +24,24 @@ const Navbar = () => {
                 <div>
                     <img className='object-contain' src={logo} height={80} width={80} alt='Not-Found' />
                 </div>
-                <div className='gap-5  font-semibold text-white hidden md:flex items-center justify-center'>
-                    <div className='flex flex-row items-center gap-1 hover:underline'>
+                <div className='gap-5  font-semibold text-white hidden md:flex items-center justify-center cursor-pointer'>
+                    <div className='flex flex-row items-center gap-1 '>
                         <IoIosHome size={20} />
                         <Link onClick={() => { navigate('/home') }}>Home</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1 hover:underline'>
+                    <div className='flex flex-row items-center gap-1'>
                         <MdMiscellaneousServices size={20} />
                         <Link>Services</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1 hover:underline'>
+                    <div className='flex flex-row items-center gap-1'>
                         <GiNuclearWaste size={20} />
                         <Link>E-Waste</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1 hover:underline'>
+                    <div className='flex flex-row items-center gap-1'>
                         <HiOutlineLightBulb size={20} />
                         <Link>About Us</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1 hover:underline'>
+                    <div className='flex flex-row items-center gap-1'>
                         <LuContact size={20} />
                         <Link>Contact Us</Link>
                     </div>
