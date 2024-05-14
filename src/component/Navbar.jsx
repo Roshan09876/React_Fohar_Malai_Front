@@ -70,7 +70,7 @@ const Navbar = () => {
             </div>
             {
                 isClick && (
-                    <div className='md:hidden transition'>
+                    <div className='md:hidden transition relative'>
                         <div className='font-semibold text-black pt-2 pb-2 px-2'>
                             <div className='flex flex-row items-center gap-1 hover:underline'>
                                 <IoIosHome size={20} />

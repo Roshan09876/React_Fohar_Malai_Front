@@ -8,7 +8,7 @@ import logo from '../../src/assets/logo.png'
 const Register = () => {
   return (
     <div className='px-10 py-5 flex justify-center h-1/2'>
-      <form className='bg-white shadow-xl rounded px-10 py-10 w-3/4'>
+      <form className='bg-white shadow-xl rounded px-10 py-10 w-full'>
         <div className='text-center text-4xl text-green-600 mb-5 '>Please fill up this form for Register</div>
 
         <div className='py-5 flex items-center justify-center'>
