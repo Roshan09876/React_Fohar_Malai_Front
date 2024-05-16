@@ -19,29 +19,32 @@ const Navbar = () => {
 
     const navigate = useNavigate();
     return (
-        <nav className='w-full h-20 bg-customgreenbg'>
+        <nav className='w-full h-20 bg-customgreenbg sticky'>
             <div className='flex flex-row justify-between items-center px-2'>
-                <div>
+                <a href='/' className='flex items-center gap-5 '>
                     <img className='object-contain' src={logo} height={80} width={80} alt='Not-Found' />
+                    <div className='lg:hidden font-bold text-white sm:text-2xl xs:text-sm'>
+                    <span>FOHAR MALAI</span>
                 </div>
-                <div className='gap-5  font-semibold text-white hidden md:flex items-center justify-center cursor-pointer'>
+                </a>
+                <div className='gap-5 font-medium text-white hidden lg:flex items-center justify-center cursor-pointer'>
                     <div className='flex flex-row items-center gap-1 '>
                         <IoIosHome size={20} />
                         <Link onClick={() => { navigate('/home') }}>Home</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1'>
+                    <div className='flex items-center gap-1'>
                         <MdMiscellaneousServices size={20} />
                         <Link>Services</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1'>
+                    <div className='flex items-center gap-1'>
                         <GiNuclearWaste size={20} />
                         <Link>E-Waste</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1'>
+                    <div className='flex items-center gap-1'>
                         <HiOutlineLightBulb size={20} />
                         <Link>About Us</Link>
                     </div>
-                    <div className='flex flex-row items-center gap-1'>
+                    <div className='flex items-center gap-1'>
                         <LuContact size={20} />
                         <Link>Contact Us</Link>
                     </div>
@@ -53,10 +56,7 @@ const Navbar = () => {
                     <Button className='uppercase' onClick={() => {
                         navigate('/login')
                     }} variant='green' >Login</Button>
-                    <div className='items-center justify-center hidden'>
-                        <RxHamburgerMenu size={30} />
-                    </div>
-                    <button onClick={handleClick} className='items-center justify-center hidden sm:flex xs:flex md:hidden'>
+                    <button onClick={handleClick} className='items-center justify-center lg:hidden'>
                         {
                             isClick ? (
                                 <IoCloseSharp size={30} />
@@ -70,21 +70,21 @@ const Navbar = () => {
             </div>
             {
                 isClick && (
-                    <div className='md:hidden transition relative'>
-                        <div className='font-semibold text-black pt-2 pb-2 px-2'>
-                            <div className='flex flex-row items-center gap-1 hover:underline'>
+                    <div className='lg:hidden transition bg-customgreenbg '>
+                        <div className=' text-white font-medium p-2 rounded-lg'>
+                            <div className='flex hover:bg-green-900 cursor-pointer gap-1 m-1 p-2 rounded-lg'>
                                 <IoIosHome size={20} />
                                 <Link>Home</Link>
                             </div>
-                            <div className='flex flex-row items-center gap-1 hover:underline'>
+                            <div className='flex hover:bg-green-900 cursor-pointer gap-1 m-1 p-2 rounded-lg'>
                                 <MdMiscellaneousServices size={20} />
                                 <Link>Services</Link>
                             </div>
-                            <div className='flex flex-row items-center gap-1 hover:underline'>
+                            <div className='flex hover:bg-green-900 cursor-pointer gap-1 m-1 p-2 rounded-lg'>
                                 <GiNuclearWaste size={20} />
                                 <Link>E-Waste</Link>
                             </div>
-                            <div className='flex flex-row items-center gap-1 hover:underline'>
+                            <div className='flex hover:bg-green-900 cursor-pointer gap-1 m-1 p-2 rounded-lg'>
                                 <HiOutlineLightBulb size={20} />
                                 <Link>About Us</Link>
                             </div>
