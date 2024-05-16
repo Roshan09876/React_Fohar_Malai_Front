@@ -1,33 +1,32 @@
 import React from 'react'
 import { Input } from '../components/ui/input'
 import { Button } from '../components/ui/button'
-import logo from '../../src/assets/logo.png'
+import image from '../../src/assets/image2.png'
+import auth from '../../src/assets/auth.png'
 
 const Login = () => {
     return (
-        <div className='px-10 py-10 flex items-center justify-center mt-10  '>
-            <form className='shadow-xl border-lime-600 rounded px-10 py-10 '>
-                <div className='text-center md:text-4xl xs:text-4xl text-green-600 mb-5 '>Please fill up this form for Login</div>
-                <div className='flex items-center justify-center'>
-                    <img src={logo} className='rounded-full ring-2 ring-gray-300 dark:ring-gray-500 w-20 h-20  ' alt='Not-Found' />
-                </div>
-                <div className='items-center justify-center flex flex-col gap-5 mt-10'>
-                    <Input className='w-4/5'
-                        type='text'
-                        placeholder='Enter UserName'
-                    />
-                    <Input className='w-4/5'
-                        type='password'
-                        placeholder='Enter Password'
-                    />
-                    <Button className='mt-3 text-3xl w-4/5 h-1/2 text-center' variant='green'>Login</Button>
-                    <div className=' flex justify-center gap-2'>
-                        <span>Don't have an account?</span>
-                        <a className='cursor-pointer' href='/signup'>SignUp</a>
-                    </div>
-                </div>
-            </form>
+        <div className='mt-10'>
+        <div className='flex flex-col md:flex-row justify-evenly items-center'>
+          <img className='hidden md:block mt-5' src={image} height={420} width={420} alt="" />
+          <div className='w-3/4 md:w-1/3'>
+            <div className='flex items-center justify-center' >
+              <img src={auth} height={140} width={140} alt="" />
+            </div>
+        <h1 className='text-center mb-3 font-medium text-customgreenbg md:text-4xl sm:text-3xl xs:text-xl'>Please fill below form to Login</h1>
+            <Input className='mb-4 border-green-700 placeholder:text-black ' type='text' placeholder='Enter username' ></Input>
+            <Input className='mb-4 border-green-700 placeholder:text-black' placeholder='Enter password' type='password' ></Input>
+            
+            <div className='justify-center items-center flex' >
+              <Button className='w-1/2' variant='green'>Login</Button>
+            </div>
+            <div className=' flex justify-center gap-2 mt-2'>
+              <span>Don't have an account?</span>
+              <a className='cursor-pointer' href='/signup'>Register</a>
+            </div>
+          </div>
         </div>
+      </div>
     )
 }
 
